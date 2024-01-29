@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5 | Make it Modern</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        body {
+            padding-top:100px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom:20px;
+        }
+        #canvas {
+            margin:0 auto;
+            background-color: green;
+            width:300px;
+            height:300px;
+            border-radius:10px;
+        }
+        #canvas.red{
+            background-color: red;
+        }
+        #changeColor {
+            margin-top:30px;
+            position: absolute;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Make It Modern</h1>
+        <div id="canvas">
+            
+        </div>
+        <button id="changeColor">Make It Modern</button>
+    </div>
+    <script>
+        document.getElementById('changeColor').addEventListener('click', function() {
+            document.getElementById('canvas').classList.toggle('red');
+        });
+    </script>
+</body>
+</html>
